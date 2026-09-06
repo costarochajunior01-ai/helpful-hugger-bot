@@ -296,6 +296,32 @@ html { scroll-behavior: smooth; }
   background-color: #060606; color: #64748B; padding: 40px 0; font-size: 0.85rem;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
+.kl .bg-dark .section-header p { color: #CBD5E1; }
+.kl .bg-dark .brand-item {
+  background: var(--secondary-graphite); border-color: rgba(255,255,255,0.08);
+}
+.kl .bg-dark .brand-name { color: var(--primary-white); }
+.kl .bg-dark .brand-desc { color: #94A3B8; }
+.kl .bg-dark .product-category-card {
+  background: var(--secondary-graphite); border-color: rgba(255,255,255,0.08);
+  border-top-color: var(--primary-orange);
+}
+.kl .bg-dark .product-category-card h3 { color: var(--primary-white); }
+.kl .bg-dark .product-category-card p { color: #94A3B8; }
+.kl .bg-dark .product-list { border-top-color: rgba(255,255,255,0.1); }
+.kl .bg-dark .product-list li { color: #E2E8F0; }
+.kl .bg-dark .authority-card {
+  background: var(--secondary-graphite); border-color: rgba(255,255,255,0.08);
+  border-left-color: var(--primary-orange);
+}
+.kl .bg-dark .authority-card h3 { color: var(--primary-white); }
+.kl .bg-dark .authority-card p { color: #94A3B8; }
+.kl .bg-dark .card {
+  background: var(--secondary-graphite); border-color: rgba(255,255,255,0.08);
+  border-bottom-color: var(--primary-orange);
+}
+.kl .bg-dark .card h3 { color: var(--primary-white); }
+.kl .bg-dark .card p { color: #94A3B8; }
 @media (max-width: 992px) {
   .kl .hero h1 { font-size: 2.4rem; }
   .kl .power-section, .kl .conversion-wrapper, .kl .coverage-grid { grid-template-columns: 1fr; }
@@ -309,6 +335,7 @@ html { scroll-behavior: smooth; }
   .kl .hero-btns { flex-direction: column; }
   .kl .btn { text-align: center; }
 }
+
 `;
 
 const TITLE = "K-Libra | Distribuição B2B de Pneus, Câmaras e Reparação";
