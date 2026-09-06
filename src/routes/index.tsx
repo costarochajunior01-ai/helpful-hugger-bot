@@ -16,8 +16,6 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="min-h-screen bg-background p-8 text-foreground">
-      <p>This is a paragraph.</p>
-    </main>
+    <p>This is a paragraph.</p>
   );
 }
