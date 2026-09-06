@@ -332,8 +332,11 @@ html { scroll-behavior: smooth; }
   .kl .form-row { grid-template-columns: 1fr; }
   .kl .hero-btns { flex-direction: column; }
   .kl .btn { text-align: center; }
-  .kl .nav-links { display: none; }
+  .kl .nav-links,
+  .kl .header-cta { display: none; }
+  .kl .nav-container { justify-content: center; }
 }
+
 
 `;
 
