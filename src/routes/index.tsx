@@ -264,12 +264,6 @@ html { scroll-behavior: smooth; }
   display: flex; align-items: center; gap: 12px;
 }
 .kl .coverage-list li i { color: var(--primary-orange); font-size: 1.1rem; }
-.kl .faq-grid { max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
-.kl .faq-item {
-  border: 1px solid var(--border-color); border-radius: 4px; padding: 28px;
-  background: var(--primary-white); border-left: 4px solid var(--primary-black);
-}
-.kl .faq-item h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--primary-black); }
 .kl .conversion-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .kl .form-container {
   background: var(--primary-white); padding: 40px; border-radius: 4px;
