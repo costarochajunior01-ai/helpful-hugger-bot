@@ -328,14 +328,16 @@ html { scroll-behavior: smooth; }
 }
 @media (max-width: 768px) {
   .kl .section-padding { padding: 60px 0; }
-  .kl .hero { padding: 140px 0 60px; }
+  .kl .hero { padding: 100px 0 60px; }
   .kl .form-row { grid-template-columns: 1fr; }
   .kl .hero-btns { flex-direction: column; }
   .kl .btn { text-align: center; }
   .kl .nav-links,
-  .kl .header-cta { display: none; }
-  .kl .nav-container { justify-content: center; }
+  .kl .header-cta,
+  .kl .brand-logo { display: none; }
+  .kl header { min-height: 0; padding: 0; border: none; }
 }
+
 
 
 `;
