@@ -73,7 +73,7 @@ html { scroll-behavior: smooth; }
 }
 .kl .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .kl .brand-logo { display: flex; align-items: center; text-decoration: none; padding: 5px 0; }
-.kl .brand-logo img { height: 72px; width: auto; display: block; object-fit: contain; }
+.kl .brand-logo img { height: 88px; width: auto; display: block; object-fit: contain; }
 .kl .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
 .kl .nav-links a {
   color: var(--primary-white); text-decoration: none; font-weight: 700;
@@ -325,7 +325,6 @@ html { scroll-behavior: smooth; }
   .kl .hero h1 { font-size: 2.4rem; }
   .kl .power-section, .kl .conversion-wrapper, .kl .coverage-grid { grid-template-columns: 1fr; }
   .kl .turnover-equation { flex-direction: column; text-align: center; }
-  .kl .nav-links { display: none; }
 }
 @media (max-width: 768px) {
   .kl .section-padding { padding: 60px 0; }
@@ -333,6 +332,7 @@ html { scroll-behavior: smooth; }
   .kl .form-row { grid-template-columns: 1fr; }
   .kl .hero-btns { flex-direction: column; }
   .kl .btn { text-align: center; }
+  .kl .nav-links { display: none; }
 }
 
 `;
