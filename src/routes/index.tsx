@@ -376,7 +376,7 @@ function Index() {
       <header>
         <div className="container nav-container">
           <a href="#" className="brand-logo" aria-label="K-Libra B2B">
-            <img src={logoKLibra} alt="K-Libra B2B Logo" />
+            <img src="https://i.ibb.co/fGdydNyy/Black-Minimalist-Fitness-Spa-Logo.png" alt="K-Libra B2B Logo" />
           </a>
 
           <nav>
