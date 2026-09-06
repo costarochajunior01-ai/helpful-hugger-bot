@@ -73,7 +73,7 @@ html { scroll-behavior: smooth; }
 }
 .kl .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .kl .brand-logo { display: flex; align-items: center; text-decoration: none; padding: 5px 0; }
-.kl .brand-logo img { height: 38px; width: auto; display: block; object-fit: contain; }
+.kl .brand-logo img { height: 72px; width: auto; display: block; object-fit: contain; }
 .kl .nav-links { display: flex; align-items: center; gap: 25px; list-style: none; }
 .kl .nav-links a {
   color: var(--primary-white); text-decoration: none; font-weight: 700;
