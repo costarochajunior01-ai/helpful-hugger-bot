@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoKLibra from "@/assets/logo-k-libra.png";
 import logoPegasus from "@/assets/logo-pegasus.png";
 
 const css = `
