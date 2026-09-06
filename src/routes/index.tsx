@@ -451,9 +451,10 @@ function Index() {
                   <p>Câmaras automotivas e industriais com alta retenção de ar e grande resistência a perfurações.</p>
                 </div>
                 <ul className="product-list">
-                  <li><i className="fa-solid fa-chevron-right"></i> Motos e utilitários</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Linha pesada e agrícola reforçada</li>
-                  <li><i className="fa-solid fa-chevron-right"></i> Válvulas de alta vedação</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Câmaras de ar agrícolas</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Câmaras de ar para caminhões</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Câmaras de ar para motos</li>
+                  <li><i className="fa-solid fa-chevron-right"></i> Câmaras de ar para diversas aplicações</li>
                 </ul>
               </div>
             </div>
