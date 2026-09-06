@@ -737,35 +737,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-padding">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2>PERGUNTAS FREQUENTES</h2>
-          </div>
-          <div className="faq-grid">
-            <div className="faq-item">
-              <h3>Quem pode comprar da K-Libra?</h3>
-              <p>Atendemos exclusivamente pessoas jurídicas (CNPJ) cadastradas no segmento automotivo e industrial, como revendas de pneus, lojistas, oficinas e borracharias com demanda recorrente.</p>
-            </div>
-            <div className="faq-item">
-              <h3>Quais linhas de produtos a K-Libra distribui?</h3>
-              <p>Distribuímos pneus para motos, câmaras de ar de diversas aplicações, insumos completos de reparações/vulcanização e ferramentas/acessórios para oficinas e borracharias.</p>
-            </div>
-            <div className="faq-item">
-              <h3>Quais regiões são atendidas pela logística da K-Libra?</h3>
-              <p>Atendemos com presença forte no Oeste da Bahia e fornecemos para todo o estado da Bahia. Informe sua cidade no formulário para verificar a frequência das nossas entregas.</p>
-            </div>
-            <div className="faq-item">
-              <h3>Como consultar condições de pagamento e tabela B2B?</h3>
-              <p>As condições são personalizadas conforme o volume e o perfil da empresa. Envie seus dados no formulário para ser contatado diretamente pela nossa equipe comercial.</p>
-            </div>
-            <div className="faq-item">
-              <h3>A K-Libra realiza vendas para pessoa física (CPF)?</h3>
-              <p>Não. Nosso modelo operacional é focado estritamente no abastecimento corporativo (B2B) e suporte a parceiros comerciais do setor.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
+
 
       <section className="section-padding bg-dark" id="formulario">
         <div className="container">
