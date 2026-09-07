@@ -563,7 +563,7 @@ function Index() {
             </div>
           </div>
 
-          <a href="#formulario" className="btn btn-primary"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Tabela de Preços B2B</a>
+          <a href="#formulario" className="btn btn-primary animate-on-scroll animate-fade-in-up"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Tabela de Preços B2B</a>
         </div>
       </section>
 
