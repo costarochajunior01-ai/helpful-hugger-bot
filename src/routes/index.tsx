@@ -493,7 +493,7 @@ function Index() {
           </div>
 
           <div className="products-grid">
-            <div className="product-category-card">
+            <div className="product-category-card animate-on-scroll animate-scale-in stagger-1">
               <div className="product-img-wrapper">
                 <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" />
               </div>
