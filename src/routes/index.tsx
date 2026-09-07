@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import logoPegasus from "@/assets/logo-pegasus.png";
 
 const css = `
@@ -18,6 +19,53 @@ const css = `
 }
 .kl * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
+/* Entrance animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-on-scroll { opacity: 0; }
+.animate-on-scroll.animated {
+  animation-fill-mode: both;
+}
+.animate-fade-in-up.animated { animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-fade-in-down.animated { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-fade-in.animated { animation: fadeIn 0.8s ease-out both; }
+.animate-scale-in.animated { animation: scaleIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-slide-in-right.animated { animation: slideInRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Stagger delays */
+.stagger-1.animated { animation-delay: 0.1s; }
+.stagger-2.animated { animation-delay: 0.2s; }
+.stagger-3.animated { animation-delay: 0.3s; }
+.stagger-4.animated { animation-delay: 0.4s; }
+.stagger-5.animated { animation-delay: 0.5s; }
+
+/* Hero load animations */
+.hero-content > * { opacity: 0; animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.hero-content h1 { animation-delay: 0.1s; }
+.hero-content p { animation-delay: 0.25s; }
+.hero-content .hero-btns { animation-delay: 0.4s; }
+.hero-content .hero-indicators { animation-delay: 0.55s; }
+
+header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .kl {
   font-family: var(--font-main);
   color: var(--text-dark);
@@ -373,6 +421,23 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animated");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    document.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="kl">
       <style dangerouslySetInnerHTML={{ __html: css }} />
@@ -413,7 +478,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-padding bg-dark thesis" id="sobre">
+      <section className="section-padding bg-dark thesis animate-on-scroll animate-fade-in" id="sobre">
         <div className="container">
           <h2>VOCÊ NÃO VENDE APENAS PRODUTO.<br />VOCÊ VENDE DISPONIBILIDADE.</h2>
           <p>Ter o produto certo no momento certo é a diferença entre fechar o negócio ou perder o cliente. A K-Libra é a distribuidora que garante sua reposição, protege sua margem e elimina riscos no abastecimento da sua revenda.</p>
@@ -422,15 +487,15 @@ function Index() {
 
       <section id="produtos" className="section-padding bg-dark">
         <div className="container text-center">
-          <div className="section-header">
+          <div className="section-header animate-on-scroll animate-fade-in-up">
             <h2>NOSSAS LINHAS DE PRODUTOS</h2>
             <p>Portfólio completo, de alto giro e alto padrão técnico para abastecer sua loja, borracharia ou oficina com um único parceiro.</p>
           </div>
 
           <div className="products-grid">
-            <div className="product-category-card">
+            <div className="product-category-card animate-on-scroll animate-scale-in stagger-1">
               <div className="product-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&q=80" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" />
+                <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" />
               </div>
               <div className="product-card-body">
                 <div>
@@ -445,7 +510,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="product-category-card">
+            <div className="product-category-card animate-on-scroll animate-scale-in stagger-2">
               <div className="product-img-wrapper">
                 <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Câmaras de ar reforçadas" loading="lazy" />
               </div>
@@ -463,7 +528,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="product-category-card">
+            <div className="product-category-card animate-on-scroll animate-scale-in stagger-3">
               <div className="product-img-wrapper">
                 <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=600&q=80" alt="Produtos de reparo e vulcanização" loading="lazy" />
               </div>
@@ -480,7 +545,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="product-category-card">
+            <div className="product-category-card animate-on-scroll animate-scale-in stagger-4">
               <div className="product-img-wrapper">
                 <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Ferramentas e acessórios profissionais" loading="lazy" />
               </div>
@@ -498,39 +563,39 @@ function Index() {
             </div>
           </div>
 
-          <a href="#formulario" className="btn btn-primary"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Tabela de Preços B2B</a>
+          <a href="#formulario" className="btn btn-primary animate-on-scroll animate-fade-in-up"><span className="graphic-arrows">&gt;&gt;</span> Solicitar Tabela de Preços B2B</a>
         </div>
       </section>
 
       <section id="marcas" className="section-padding bg-light">
         <div className="container text-center">
-          <div className="section-header">
+          <div className="section-header animate-on-scroll animate-fade-in-up">
             <h2>MARCAS DE CONFIANÇA QUE DISTRIBUÍMOS</h2>
             <p>Parceria direta com fabricantes líderes de mercado: tecnologia, performance e garantia comercial para o seu cliente final.</p>
           </div>
 
           <div className="brands-grid">
-            <div className="brand-item">
+            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-1">
               <img src={logoPegasus} alt="Logo Pegasus" className="brand-logo-img" loading="lazy" />
               <span className="brand-tag">Pneus de Moto</span>
               <p className="brand-desc">Durabilidade, aderência e alto rendimento quilométrico para duas rodas.</p>
             </div>
-            <div className="brand-item">
+            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-2">
               <span className="brand-name">TORTUGA</span>
               <span className="brand-tag">Câmaras de Ar</span>
               <p className="brand-desc">Liderança nacional em câmaras reforçadas para agrícola, utilitários e carga.</p>
             </div>
-            <div className="brand-item">
+            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-3">
               <span className="brand-name">VIPAL</span>
               <span className="brand-tag">Reparação &amp; Insumos</span>
               <p className="brand-desc">Tecnologia mundial em vulcanização, remendos e insumos profissionais.</p>
             </div>
-            <div className="brand-item">
+            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-4">
               <span className="brand-name">VULCAFLEX</span>
               <span className="brand-tag">Soluções de Reparo</span>
               <p className="brand-desc">Reparação rápida e insumos técnicos de alta resistência.</p>
             </div>
-            <div className="brand-item">
+            <div className="brand-item animate-on-scroll animate-fade-in-up stagger-5">
               <span className="brand-name">FVA</span>
               <span className="brand-tag">Acessórios &amp; Ferramentas</span>
               <p className="brand-desc">Suprimentos, válvulas e ferramentas para manutenção de pneus.</p>
@@ -541,23 +606,23 @@ function Index() {
 
       <section className="section-padding bg-dark">
         <div className="container">
-          <div className="section-header text-center">
+          <div className="section-header text-center animate-on-scroll animate-fade-in-up">
             <h2>POR QUE REVENDAS CONFIAM NA K-LIBRA</h2>
             <p>Operação estruturada, atendimento exclusivo para CNPJ e entrega no prazo para manter seu estoque girando.</p>
           </div>
 
           <div className="authority-grid">
-            <div className="authority-card">
+            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-1">
               <div className="number">+1000</div>
               <h3>CLIENTES ATENDIDOS</h3>
               <p>Revendas, oficinas e borracharias abastecidas pela nossa distribuição.</p>
             </div>
-            <div className="authority-card">
+            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-2">
               <div className="number">100%</div>
               <h3>FOCO EM CNPJ</h3>
               <p>Atendimento estritamente B2B: o consumidor final não concorre com você.</p>
             </div>
-            <div className="authority-card">
+            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-3">
               <div className="number">24/48h</div>
               <h3>DESPACHO ÁGIL</h3>
               <p>Pedidos processados rápido para sua loja nunca perder venda por falta.</p>
@@ -565,17 +630,17 @@ function Index() {
           </div>
 
           <div className="institutional-data-container" style={{ marginTop: 40, marginBottom: 0 }}>
-            <div className="stat-card">
+            <div className="stat-card animate-on-scroll animate-fade-in-up stagger-1">
               <div className="stat-icon"><i className="fa-solid fa-business-time"></i></div>
               <div className="stat-number">Desde 2022</div>
               <div className="stat-label">Atuação no mercado B2B</div>
             </div>
-            <div className="stat-card">
+            <div className="stat-card animate-on-scroll animate-fade-in-up stagger-2">
               <div className="stat-icon"><i className="fa-solid fa-map-pin"></i></div>
               <div className="stat-number">Bahia</div>
               <div className="stat-label">Rotas próprias e entrega em todo o estado</div>
             </div>
-            <div className="testimonial-card">
+            <div className="testimonial-card animate-on-scroll animate-fade-in-up stagger-3">
               <div className="quote-icon"><i className="fa-solid fa-quote-left"></i></div>
               <p className="testimonial-text">"A pontualidade nas entregas e a constância no estoque facilitam muito o nosso giro semanal. Um parceiro B2B de extrema confiança."</p>
               <div className="testimonial-author">
@@ -590,7 +655,7 @@ function Index() {
       <section className="section-padding bg-dark" id="formulario" style={{ borderTop: "2px solid var(--primary-orange)" }}>
         <div className="container">
           <div className="conversion-wrapper">
-            <div>
+            <div className="animate-on-scroll animate-fade-in-up">
               <h2>PRONTO PARA ABASTECER SUA REVENDA?</h2>
               <p style={{ marginTop: 20, fontSize: "1.2rem", color: "#CBD5E1" }}>Fale com nossa equipe comercial e receba o portfólio completo e as condições B2B disponíveis para a sua empresa.</p>
               <div style={{ marginTop: 30 }}>
@@ -599,7 +664,7 @@ function Index() {
                 <p style={{ fontSize: "0.9rem", color: "var(--primary-orange)", fontWeight: 800, textTransform: "uppercase", marginTop: 10 }}><i className="fa-solid fa-check"></i> Reposição com rotas programadas</p>
               </div>
             </div>
-            <div className="form-container">
+            <div className="form-container animate-on-scroll animate-slide-in-right">
               <h3>SOLICITE ATENDIMENTO COMERCIAL</h3>
               <p>Informe os dados da sua empresa. Nossa equipe entrará em contato para apresentar o portfólio e as condições disponíveis.</p>
 
@@ -645,7 +710,7 @@ function Index() {
                     <option value="Todos">Mix Completo</option>
                   </select>
                 </div>
-                <button type="submit" className="btn btn-primary btn-full"><span className="graphic-arrows">&gt;&gt;</span> QUERO RECEBER ATENDIMENTO B2B</button>
+                <button type="submit" className="btn btn-primary btn-full animate-on-scroll animate-fade-in-up"><span className="graphic-arrows">&gt;&gt;</span> QUERO RECEBER ATENDIMENTO B2B</button>
               </form>
             </div>
           </div>
@@ -662,7 +727,7 @@ function Index() {
         <i className="fa-brands fa-whatsapp"></i>
       </a>
 
-      <footer>
+      <footer className="animate-on-scroll animate-fade-in">
         <div className="container text-center">
           <p><strong>K-LIBRA ARTEFATOS DE BORRACHA</strong> — Sua parceira de abastecimento B2B.</p>
           <p style={{ marginTop: 8, fontSize: "0.8rem" }}>&copy; Todos os direitos reservados. Aplicação exclusiva para o mercado corporativo B2B.</p>
