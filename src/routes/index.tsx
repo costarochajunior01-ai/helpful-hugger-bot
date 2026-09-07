@@ -478,7 +478,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="section-padding bg-dark thesis" id="sobre">
+      <section className="section-padding bg-dark thesis animate-on-scroll animate-fade-in" id="sobre">
         <div className="container">
           <h2>VOCÊ NÃO VENDE APENAS PRODUTO.<br />VOCÊ VENDE DISPONIBILIDADE.</h2>
           <p>Ter o produto certo no momento certo é a diferença entre fechar o negócio ou perder o cliente. A K-Libra é a distribuidora que garante sua reposição, protege sua margem e elimina riscos no abastecimento da sua revenda.</p>
