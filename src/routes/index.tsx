@@ -19,6 +19,53 @@ const css = `
 }
 .kl * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
+/* Entrance animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-on-scroll { opacity: 0; }
+.animate-on-scroll.animated {
+  animation-fill-mode: both;
+}
+.animate-fade-in-up.animated { animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-fade-in-down.animated { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-fade-in.animated { animation: fadeIn 0.8s ease-out both; }
+.animate-scale-in.animated { animation: scaleIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-slide-in-right.animated { animation: slideInRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Stagger delays */
+.stagger-1.animated { animation-delay: 0.1s; }
+.stagger-2.animated { animation-delay: 0.2s; }
+.stagger-3.animated { animation-delay: 0.3s; }
+.stagger-4.animated { animation-delay: 0.4s; }
+.stagger-5.animated { animation-delay: 0.5s; }
+
+/* Hero load animations */
+.hero-content > * { opacity: 0; animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.hero-content h1 { animation-delay: 0.1s; }
+.hero-content p { animation-delay: 0.25s; }
+.hero-content .hero-btns { animation-delay: 0.4s; }
+.hero-content .hero-indicators { animation-delay: 0.55s; }
+
+header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .kl {
   font-family: var(--font-main);
   color: var(--text-dark);
