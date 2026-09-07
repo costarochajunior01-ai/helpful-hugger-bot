@@ -710,7 +710,7 @@ function Index() {
                     <option value="Todos">Mix Completo</option>
                   </select>
                 </div>
-                <button type="submit" className="btn btn-primary btn-full"><span className="graphic-arrows">&gt;&gt;</span> QUERO RECEBER ATENDIMENTO B2B</button>
+                <button type="submit" className="btn btn-primary btn-full animate-on-scroll animate-fade-in-up"><span className="graphic-arrows">&gt;&gt;</span> QUERO RECEBER ATENDIMENTO B2B</button>
               </form>
             </div>
           </div>
