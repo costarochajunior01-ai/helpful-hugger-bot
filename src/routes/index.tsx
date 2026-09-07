@@ -116,12 +116,12 @@ header { animation: fadeInDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) both; }
 }
 .kl .btn-secondary:hover { background-color: var(--primary-white); color: var(--primary-black); }
 .kl header {
-  background-color: var(--primary-black); padding: 15px 0; position: fixed;
+  background-color: var(--primary-black); padding: 8px 0; position: fixed;
   width: 100%; top: 0; z-index: 1000; border-bottom: 2px solid var(--primary-orange);
 }
 .kl .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.kl .brand-logo { display: flex; align-items: center; text-decoration: none; padding: 5px 0; }
-.kl .brand-logo img { height: 88px; width: auto; display: block; object-fit: contain; }
+.kl .brand-logo { display: flex; align-items: center; text-decoration: none; padding: 2px 0; }
+.kl .brand-logo img { height: 56px; width: auto; display: block; object-fit: contain; }
 .kl .nav-links { display: flex; align-items: center; gap: 14px; list-style: none; }
 .kl .nav-links a {
   color: var(--primary-white); text-decoration: none; font-weight: 700;
