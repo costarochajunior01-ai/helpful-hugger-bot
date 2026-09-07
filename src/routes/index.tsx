@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import logoPegasus from "@/assets/logo-pegasus.png";
 
 const css = `
@@ -430,7 +431,7 @@ function Index() {
           <div className="products-grid">
             <div className="product-category-card">
               <div className="product-img-wrapper">
-                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&q=80" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" />
+                <img src="https://i.ibb.co/XZWgYv1m/60140c5a-8d30-4b82-9441-f61f7f8e0f3d.png" alt="Pneus de moto de alta qualidade para revenda" loading="lazy" />
               </div>
               <div className="product-card-body">
                 <div>
