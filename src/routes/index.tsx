@@ -569,7 +569,7 @@ function Index() {
 
       <section id="marcas" className="section-padding bg-light">
         <div className="container text-center">
-          <div className="section-header">
+          <div className="section-header animate-on-scroll animate-fade-in-up">
             <h2>MARCAS DE CONFIANÇA QUE DISTRIBUÍMOS</h2>
             <p>Parceria direta com fabricantes líderes de mercado: tecnologia, performance e garantia comercial para o seu cliente final.</p>
           </div>
