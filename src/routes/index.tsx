@@ -655,7 +655,7 @@ function Index() {
       <section className="section-padding bg-dark" id="formulario" style={{ borderTop: "2px solid var(--primary-orange)" }}>
         <div className="container">
           <div className="conversion-wrapper">
-            <div>
+            <div className="animate-on-scroll animate-fade-in-up">
               <h2>PRONTO PARA ABASTECER SUA REVENDA?</h2>
               <p style={{ marginTop: 20, fontSize: "1.2rem", color: "#CBD5E1" }}>Fale com nossa equipe comercial e receba o portfólio completo e as condições B2B disponíveis para a sua empresa.</p>
               <div style={{ marginTop: 30 }}>
@@ -664,7 +664,7 @@ function Index() {
                 <p style={{ fontSize: "0.9rem", color: "var(--primary-orange)", fontWeight: 800, textTransform: "uppercase", marginTop: 10 }}><i className="fa-solid fa-check"></i> Reposição com rotas programadas</p>
               </div>
             </div>
-            <div className="form-container">
+            <div className="form-container animate-on-scroll animate-slide-in-right">
               <h3>SOLICITE ATENDIMENTO COMERCIAL</h3>
               <p>Informe os dados da sua empresa. Nossa equipe entrará em contato para apresentar o portfólio e as condições disponíveis.</p>
 
