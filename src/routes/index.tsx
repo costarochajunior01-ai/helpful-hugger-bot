@@ -727,7 +727,7 @@ function Index() {
         <i className="fa-brands fa-whatsapp"></i>
       </a>
 
-      <footer>
+      <footer className="animate-on-scroll animate-fade-in">
         <div className="container text-center">
           <p><strong>K-LIBRA ARTEFATOS DE BORRACHA</strong> — Sua parceira de abastecimento B2B.</p>
           <p style={{ marginTop: 8, fontSize: "0.8rem" }}>&copy; Todos os direitos reservados. Aplicação exclusiva para o mercado corporativo B2B.</p>
