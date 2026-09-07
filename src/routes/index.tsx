@@ -612,17 +612,17 @@ function Index() {
           </div>
 
           <div className="authority-grid">
-            <div className="authority-card">
+            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-1">
               <div className="number">+1000</div>
               <h3>CLIENTES ATENDIDOS</h3>
               <p>Revendas, oficinas e borracharias abastecidas pela nossa distribuição.</p>
             </div>
-            <div className="authority-card">
+            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-2">
               <div className="number">100%</div>
               <h3>FOCO EM CNPJ</h3>
               <p>Atendimento estritamente B2B: o consumidor final não concorre com você.</p>
             </div>
-            <div className="authority-card">
+            <div className="authority-card animate-on-scroll animate-fade-in-up stagger-3">
               <div className="number">24/48h</div>
               <h3>DESPACHO ÁGIL</h3>
               <p>Pedidos processados rápido para sua loja nunca perder venda por falta.</p>
