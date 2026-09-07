@@ -606,7 +606,7 @@ function Index() {
 
       <section className="section-padding bg-dark">
         <div className="container">
-          <div className="section-header text-center">
+          <div className="section-header text-center animate-on-scroll animate-fade-in-up">
             <h2>POR QUE REVENDAS CONFIAM NA K-LIBRA</h2>
             <p>Operação estruturada, atendimento exclusivo para CNPJ e entrega no prazo para manter seu estoque girando.</p>
           </div>
