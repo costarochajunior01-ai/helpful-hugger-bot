@@ -487,7 +487,7 @@ function Index() {
 
       <section id="produtos" className="section-padding bg-dark">
         <div className="container text-center">
-          <div className="section-header">
+          <div className="section-header animate-on-scroll animate-fade-in-up">
             <h2>NOSSAS LINHAS DE PRODUTOS</h2>
             <p>Portfólio completo, de alto giro e alto padrão técnico para abastecer sua loja, borracharia ou oficina com um único parceiro.</p>
           </div>
