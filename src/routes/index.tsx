@@ -545,7 +545,7 @@ function Index() {
               </div>
             </div>
 
-            <div className="product-category-card">
+            <div className="product-category-card animate-on-scroll animate-scale-in stagger-4">
               <div className="product-img-wrapper">
                 <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Ferramentas e acessórios profissionais" loading="lazy" />
               </div>
