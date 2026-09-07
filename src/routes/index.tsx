@@ -630,17 +630,17 @@ function Index() {
           </div>
 
           <div className="institutional-data-container" style={{ marginTop: 40, marginBottom: 0 }}>
-            <div className="stat-card">
+            <div className="stat-card animate-on-scroll animate-fade-in-up stagger-1">
               <div className="stat-icon"><i className="fa-solid fa-business-time"></i></div>
               <div className="stat-number">Desde 2022</div>
               <div className="stat-label">Atuação no mercado B2B</div>
             </div>
-            <div className="stat-card">
+            <div className="stat-card animate-on-scroll animate-fade-in-up stagger-2">
               <div className="stat-icon"><i className="fa-solid fa-map-pin"></i></div>
               <div className="stat-number">Bahia</div>
               <div className="stat-label">Rotas próprias e entrega em todo o estado</div>
             </div>
-            <div className="testimonial-card">
+            <div className="testimonial-card animate-on-scroll animate-fade-in-up stagger-3">
               <div className="quote-icon"><i className="fa-solid fa-quote-left"></i></div>
               <p className="testimonial-text">"A pontualidade nas entregas e a constância no estoque facilitam muito o nosso giro semanal. Um parceiro B2B de extrema confiança."</p>
               <div className="testimonial-author">
